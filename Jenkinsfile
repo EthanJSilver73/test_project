@@ -4,16 +4,7 @@ pipeline {
     stage("build"){
       steps{
         echo 'Building Initiated'
-      }
-    }
-    stage("test"){
-      steps{
-        echo 'Testing Initiated'
-      }
-    }
-    stage("deploy"){
-      steps{
-        echo 'Deployment Initiated'
+        pytest get_links.py
       }
     }
   }
